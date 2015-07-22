@@ -1,1 +1,1 @@
-angular.module("myAngularSeed", ["ui.router"])
+angular.module("angularTodoList", ["ui.router"])

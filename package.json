@@ -1,11 +1,11 @@
 {
-  "name": "my-angular-seed",
+  "name": "angular-todo-list",
   "version": "0.0.1",
-  "description": "my seed for angular projects",
-  "main": "index.js",
+  "description": "A simple todo list app made with angular (for learning purposes!)",
+  "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MattCain/my-angular-seed.git"
+    "url": "https://github.com/MattCain/angular-todo-list.git"
   },
   "keywords": [
     "angularjs"
@@ -13,9 +13,9 @@
   "author": "Matt Cain",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MattCain/my-angular-seed/issues"
+    "url": "https://github.com/MattCain/angular-todo-list/issues"
   },
-  "homepage": "https://github.com/MattCain/my-angular-seed",
+  "homepage": "https://github.com/MattCain/angular-todo-list",
   "devDependencies": {
     "grunt": "~0.4.5",
     "bower": "~1.4.1",

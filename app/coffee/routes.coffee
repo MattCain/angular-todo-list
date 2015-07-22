@@ -1,4 +1,4 @@
-angular.module("myAngularSeed")
+angular.module("angularTodoList")
   .config(($stateProvider) ->
 
     $stateProvider
