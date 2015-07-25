@@ -1,5 +1,5 @@
 angular
-   .module("angularTodoList", ["ui.router"])
+   .module("angularTodoList", ["ui.router", "ui.bootstrap"])
    .config(['$stateProvider', '$urlMatcherFactoryProvider',
       ($stateProvider, $urlMatcherFactoryProvider) ->
 

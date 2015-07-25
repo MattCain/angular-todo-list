@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="angularTodoList">
+  <body ng-app="angularTodoList" ng-controller="TodosCtrl">
     <!--[if lt IE 10]>
       <div class="ui container warning message">
         <i class="close icon"></i>
@@ -42,7 +42,7 @@
 
 
         <div class="navbar-form navbar-right navbar-collapse" ng-class="{collapse: isCollapsed}">
-          <button class="btn btn-primary">Create Todo <i class="glyphicon glyphicon-plus-sign"></i></button>
+          <button class="btn btn-primary" ng-click="openCreationModal()">Create Todo <i class="glyphicon glyphicon-plus-sign"></i></button>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
@@ -60,10 +60,12 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbuild -->
 
     <!-- build:js(.tmp) scripts/app.min.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/todos.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
