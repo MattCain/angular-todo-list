@@ -1,6 +1,6 @@
 angular
    .module("angularTodoList", ["ui.router"])
-   .config(['$stateProvider', '$urlMatcherFactoryProvider', 
+   .config(['$stateProvider', '$urlMatcherFactoryProvider',
       ($stateProvider, $urlMatcherFactoryProvider) ->
 
          $urlMatcherFactoryProvider.strictMode(false)
