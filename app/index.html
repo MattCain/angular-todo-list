@@ -15,17 +15,7 @@
     <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="angularTodoList" ng-controller="TodosCtrl">
-    <!--[if lt IE 10]>
-      <div class="ui container warning message">
-        <i class="close icon"></i>
-        <div class="header">
-          You are using an <strong>outdated</strong> browser!
-        </div>
-        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-      </div>
-    <![endif]-->
-
+  <body ng-app="angularTodoList">
 
     <nav id="header" class="navbar navbar-default">
       <div class="container-fluid">
@@ -41,8 +31,8 @@
           </div>
 
 
-        <div class="navbar-form navbar-right navbar-collapse" ng-class="{collapse: isCollapsed}">
-          <button class="btn btn-primary" ng-click="openCreationModal()">Create Todo <i class="glyphicon glyphicon-plus-sign"></i></button>
+        <div class="navbar-form navbar-right navbar-collapse" ng-class="{collapse: isCollapsed}" ng-controller="TodosCtrl">
+          <button class="btn btn-primary" ng-click="openModal()">Create Todo <i class="glyphicon glyphicon-plus-sign"></i></button>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
@@ -66,6 +56,7 @@
     <!-- build:js(.tmp) scripts/app.min.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/todos.js"></script>
+    <script src="scripts/controllers/modal.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

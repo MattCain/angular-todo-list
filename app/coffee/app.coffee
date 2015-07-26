@@ -9,9 +9,11 @@ angular
             .state("index",
                url: ""
                templateUrl: "templates/index.html"
+               controller: "TodosCtrl"
             )
             .state("page2",
                url: "page2"
                templateUrl: "templates/page2.html"
             )
    ])
+   .value("Todos", [])

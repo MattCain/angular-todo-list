@@ -1,1 +1,12 @@
-<p>Welcome to the index page</p>
+<div class="row">
+   <div ng-repeat="todo in todos track by $index">
+      <div ng-if="$index % 3 == 0" class="clearfix"></div>
+      <div class="col-md-4">
+         <div class="panel panel-default">
+            <div class="panel-heading">{{todo.title}}</div>
+            <div class="panel-body">{{todo.description}}</div>
+         </div>
+      </div>
+   </div>
+   <div ng-hide="todos.length">No todos yet!</div>
+</div>
