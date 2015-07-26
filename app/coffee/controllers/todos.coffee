@@ -4,14 +4,26 @@ angular
 
       $scope.todos = Todos
 
-      $scope.openModal = ->
+      $scope.openModal = =>
          modalInstance = $modal.open(
             templateUrl: "/templates/modal.html"
             controller: "ModalCtrl"
          )
 
-         modalInstance.result.then((newTodo) ->
-            $scope.todos.push(newTodo)
-            sessionStorage.setItem("todos", JSON.stringify($scope.todos))
+         modalInstance.result.then((newTodo) =>
+            @createTodo(newTodo)
          )
+
+      @createTodo = (newTodo) ->
+         Todos.push(newTodo)
+         @saveTodos()
+         
+
+      @removeTodo = $scope.removeTodo = (index) =>
+         Todos.splice(index, 1)
+         @saveTodos()
+
+      @saveTodos = ->
+         sessionStorage.setItem("todos", JSON.stringify(Todos))
+
    )
