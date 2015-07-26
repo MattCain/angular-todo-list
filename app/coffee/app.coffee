@@ -14,6 +14,7 @@ angular
             )
    ])
    .value("Todos", do ->
+      # check for saved todos
       todos = sessionStorage.getItem("todos")
       if todos then JSON.parse(todos) else []
    )

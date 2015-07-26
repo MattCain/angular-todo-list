@@ -23,6 +23,8 @@ angular
          Todos.splice(index, 1)
          @saveTodos()
 
+      # save the todos in sessionStorage as a JSON string.
+      # the todos aren't important so sessionStorage is fine as it'll clear them when the page closes.
       @saveTodos = ->
          sessionStorage.setItem("todos", JSON.stringify(Todos))
 
