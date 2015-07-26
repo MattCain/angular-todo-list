@@ -12,5 +12,6 @@ angular
 
          modalInstance.result.then((newTodo) ->
             $scope.todos.push(newTodo)
+            sessionStorage.setItem("todos", JSON.stringify($scope.todos))
          )
    )

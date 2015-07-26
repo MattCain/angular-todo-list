@@ -3,6 +3,7 @@ angular
    .config(['$stateProvider', '$urlMatcherFactoryProvider',
       ($stateProvider, $urlMatcherFactoryProvider) ->
 
+         # Allow trailing slashes
          $urlMatcherFactoryProvider.strictMode(false)
 
          $stateProvider
@@ -11,9 +12,8 @@ angular
                templateUrl: "templates/index.html"
                controller: "TodosCtrl"
             )
-            .state("page2",
-               url: "page2"
-               templateUrl: "templates/page2.html"
-            )
    ])
-   .value("Todos", [])
+   .value("Todos", do ->
+      todos = sessionStorage.getItem("todos")
+      if todos then JSON.parse(todos) else []
+   )
