@@ -1,5 +1,5 @@
-# my-angular-seed
-My personal angular seed using my preferred stack. Some simple routing is included, much like in angular-seed.
+# angular-todo-list
+A simple todo list type app.
 
 Clone the repo then run
 
