@@ -22,7 +22,8 @@ angular
          
 
       @removeTodo = $scope.removeTodo = (id) =>
-         Todos = _.reject(Todos, (todo) -> id is todo.id )
+         index = _.findIndex(Todos, (todo) -> id is todo.id)
+         Todos.splice(index, 1)
          @saveTodos()
 
       @faveTodo = $scope.faveTodo = (id) =>

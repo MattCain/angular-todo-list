@@ -1,5 +1,9 @@
 <div class="row">
-   <div ng-repeat="todo in todos | orderBy:'-fave' track by $index">
+   <input type="text" class="form-control col-md-12" placeholder="Search..." ng-model="searchTerm">
+</div>
+<hr>
+<div class="row">
+   <div ng-repeat="todo in todos | orderBy:'-fave' | filter:searchTerm track by $index">
       <div ng-if="$index % 3 == 0" class="clearfix"></div>
       <div class="col-md-4">
          <div class="panel panel-default todo" ng-class="todo.fave ? 'panel-warning':''">
@@ -9,7 +13,7 @@
             <div class="panel-body">{{todo.description}}</div>
             <div class="panel-footer clearfix">
                <div class="col-md-6 text-center">
-                  <a ng-click="faveTodo(todo.id)"><i class="glyphicon fave" ng-class="(todo.fave) ? 'glyphicon-star' : 'glyphicon-star-empty'"></i></a>
+                  <a ng-click="faveTodo(todo.id)"><i class="glyphicon fave" ng-class="todo.fave ? 'glyphicon-star' : 'glyphicon-star-empty'"></i></a>
                </div>
                <div class="col-md-6 text-center">
                   <a ng-click="removeTodo(todo.id)"><i class="glyphicon glyphicon-trash remove"></i></a>
