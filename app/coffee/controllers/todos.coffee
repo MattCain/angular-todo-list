@@ -15,12 +15,19 @@ angular
          )
 
       @createTodo = (newTodo) ->
+         if not newTodo.fave then newTodo.fave = false
+         newTodo.id = _.uniqueId()
          Todos.push(newTodo)
          @saveTodos()
          
 
-      @removeTodo = $scope.removeTodo = (index) =>
-         Todos.splice(index, 1)
+      @removeTodo = $scope.removeTodo = (id) =>
+         Todos = _.reject(Todos, (todo) -> id is todo.id )
+         @saveTodos()
+
+      @faveTodo = $scope.faveTodo = (id) =>
+         toFave = _.find(Todos, (todo) -> todo.id is id)
+         toFave.fave = !toFave.fave
          @saveTodos()
 
       # save the todos in sessionStorage as a JSON string.
