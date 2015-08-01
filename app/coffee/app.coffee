@@ -1,5 +1,5 @@
 angular
-   .module("angularTodoList", ["ui.router", "ui.bootstrap"])
+   .module("angularTodoList", ["ui.router", "ui.bootstrap", "ngAnimate"])
    .config(['$stateProvider', '$urlMatcherFactoryProvider',
       ($stateProvider, $urlMatcherFactoryProvider) ->
 

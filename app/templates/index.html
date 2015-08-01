@@ -5,10 +5,10 @@
 </div>
 <hr>
 <div class="row">
-   <div ng-repeat="todo in todos | orderBy:'-fave' | filter:searchTerm track by $index">
+   <div ng-repeat="todo in todos | orderBy:'-fave' | filter:searchTerm track by $index" class="todo">
       <div ng-if="$index % 3 == 0" class="clearfix"></div>
       <div class="col-md-4">
-         <div class="panel panel-default todo" ng-class="todo.fave ? 'panel-warning':''">
+         <div class="panel panel-default" ng-class="todo.fave ? 'panel-warning':''">
             <div class="panel-heading">
                {{todo.title}}
             </div>
@@ -24,5 +24,5 @@
          </div>
       </div>
    </div>
-   <div ng-hide="todos.length">No todos yet!</div>
+   <div ng-hide="todos.length" class="col-md-12" id="no-results">No todos!</div>
 </div>

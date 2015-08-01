@@ -16,7 +16,7 @@ angular
 
       @createTodo = (newTodo) ->
          if not newTodo.fave then newTodo.fave = false
-         newTodo.id = _.uniqueId()
+         newTodo.id = Date.now()
          Todos.push(newTodo)
          @saveTodos()
          
